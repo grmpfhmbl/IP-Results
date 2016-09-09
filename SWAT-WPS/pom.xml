@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <parent>
+        <artifactId>52-North</artifactId>
+        <groupId>org.n52</groupId>
+        <version>5.6.6</version>
+    </parent>
+
+    <groupId>at.zgis.wps.swat</groupId>
+    <artifactId>swat-extension</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <inceptionYear>2015</inceptionYear>
+    <url>http://www.zgis.at</url>
+
+    <properties>
+        <wps.version>3.4.0</wps.version>
+    </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+    <!-- TODO
+    <scm>
+        <connection>scm:git:git://github.com/52North/WPS-Extension-Skeleton.git</connection>
+        <url>https://github.com/52North/WPS-Extension-Skeleton</url>
+        <developerConnection>scm:git:ssh://git@github.com/52North/WPS-Extension-Skeleton.git</developerConnection>
+    </scm>
+    -->
+    <dependencies>
+        <dependency>
+            <groupId>org.n52.wps</groupId>
+            <artifactId>52n-wps-io</artifactId>
+            <version>${wps.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.n52.wps</groupId>
+            <artifactId>52n-wps-io-impl</artifactId>
+            <version>${wps.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.n52.wps</groupId>
+            <artifactId>52n-wps-algorithm</artifactId>
+            <version>${wps.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.n52.wps</groupId>
+            <artifactId>52n-wps-sextante</artifactId>
+            <version>${wps.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.n52.wps</groupId>
+            <artifactId>52n-wps-server</artifactId>
+            <version>${wps.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>net.lingala.zip4j</groupId>
+            <artifactId>zip4j</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>n52-releases</id>
+            <name>n52-releases</name>
+            <url>http://52north.org/maven/repo/releases/</url>
+        </repository>
+        <!-- TODO add zgis repo! -->
+    </repositories>
+</project>
